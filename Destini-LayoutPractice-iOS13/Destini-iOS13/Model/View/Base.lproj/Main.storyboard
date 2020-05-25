@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Destini_iOS13" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Ha6-n5-sZu">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="gOW-Pb-KIp">
+                                <rect key="frame" x="10" y="44" width="394" height="818"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Story Text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXL-ed-vYJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="586"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <color key="textColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2VB-zB-HSg">
+                                        <rect key="frame" x="0.0" y="608" width="394" height="94"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="94" id="VZh-Iu-QXz"/>
+                                        </constraints>
+                                        <state key="normal" title="choiceButton1" backgroundImage="choice1Background">
+                                            <color key="titleColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="choiceMade:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R7F-oF-8pE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4sG-th-q52">
+                                        <rect key="frame" x="0.0" y="724" width="394" height="94"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="94" id="nGA-Aa-iTP"/>
+                                        </constraints>
+                                        <state key="normal" title="choiceButton2" backgroundImage="choice2Background">
+                                            <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="choiceMade:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fkp-JD-ace"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="gOW-Pb-KIp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="BQY-Jm-tla"/>
+                            <constraint firstAttribute="bottom" secondItem="Ha6-n5-sZu" secondAttribute="bottom" id="Enn-xQ-hEk"/>
+                            <constraint firstItem="gOW-Pb-KIp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rdq-bh-F7C"/>
+                            <constraint firstItem="Ha6-n5-sZu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="S1c-G3-iX4"/>
+                            <constraint firstItem="gOW-Pb-KIp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="baf-ds-5BK"/>
+                            <constraint firstAttribute="trailing" secondItem="gOW-Pb-KIp" secondAttribute="trailing" constant="10" id="mQA-xl-fwS"/>
+                            <constraint firstItem="Ha6-n5-sZu" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mQL-co-EqE"/>
+                            <constraint firstItem="Ha6-n5-sZu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="rny-nu-S5K"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gOW-Pb-KIp" secondAttribute="bottom" id="t8d-s3-Wth"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="choiceButton1" destination="2VB-zB-HSg" id="YQY-Rp-VJf"/>
+                        <outlet property="choiceButton2" destination="4sG-th-q52" id="r9f-ZM-1Yl"/>
+                        <outlet property="storyLabel" destination="nXL-ed-vYJ" id="Brp-Wn-eS7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="958" height="1793"/>
+        <image name="choice1Background" width="1370.5" height="363"/>
+        <image name="choice2Background" width="1370.5" height="363"/>
+    </resources>
+</document>
